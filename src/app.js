@@ -10,8 +10,8 @@ import petsRouter from './routes/pets.router.js';
 import adoptionsRouter from './routes/adoption.router.js';
 import sessionsRouter from './routes/sessions.router.js';
 
-import swaggerUI from 'swagger-ui-express'; //interfaz grafica
-import swaggerJsdoc from 'swagger-jsdoc'; //swagger comun
+import swaggerUI from 'swagger-ui-express'; 
+import swaggerJsdoc from 'swagger-jsdoc'; 
 
 import path from 'path';
 import __dirname from './utils/index.js';
@@ -47,7 +47,7 @@ app.use('/api/pets',petsRouter);
 app.use('/api/adoptions',adoptionsRouter);
 app.use('/api/sessions',sessionsRouter);
 
-app.use('/apidocs', swaggerUI.serve, swaggerUI.setup(specs)); //endpoint de swagger
+app.use('/apidocs', swaggerUI.serve, swaggerUI.setup(specs));
 
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
 
